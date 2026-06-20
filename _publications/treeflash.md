@@ -6,19 +6,23 @@ year: 2026
 date: 2026-06-03
 github: "https://github.com/ETH-DISCO/TreeFlash"
 arxiv: "https://arxiv.org/abs/2606.03819"
-paper: "/assets/files/treeflash.pdf"
 bibtex: "/assets/files/treeflash.bib"
 project:
 description: "TreeFlash accelerates tree-based speculative decoding by adding a lightweight autoregressive approximation to one-shot block drafting."
 abstract: "One-shot block drafters for speculative decoding generate the full draft in a single forward pass, achieving strong throughput by eliminating sequential token generation. However, they predict each draft token conditioned only on the prefix context, with no dependence on previously drafted tokens. TreeFlash incorporates an MLP layer conditioned on the drafter's hidden state and previous token to approximate an autoregressive distribution while retaining O(1) drafting time complexity."
 ---
 
+<figure>
+  <video class="paper-video" src="/assets/publications/treeflash/sidebyside_sd.mp4" controls playsinline preload="metadata"></video>
+  <figcaption>
+    <strong>Demo:</strong> Side-by-side speculative decoding comparison with TreeFlash.
+  </figcaption>
+</figure>
+
 ## Overview
 
 <figure>
-  <object class="paper-figure" data="/assets/treeflash/method.pdf" type="application/pdf">
-    <a href="/assets/treeflash/method.pdf">View Figure 1</a>
-  </object>
+  <img src="/assets/publications/treeflash/method.png" alt="Overview of EAGLE-3, TreeFlash, and DFlash drafting paradigms.">
   <figcaption>
     <strong>Figure 1:</strong> TreeFlash sits between autoregressive and fully marginal one-shot drafting. It keeps the single-pass efficiency of DFlash while adding a lightweight autoregressive approximation layer that conditions each draft position on the preceding drafted token.
   </figcaption>
@@ -33,9 +37,7 @@ TreeFlash addresses this bottleneck with a small AR-approximation module. It con
 ## How It Works
 
 <figure>
-  <object class="paper-figure" data="/assets/treeflash/presentation_ar_approx.pdf" type="application/pdf">
-    <a href="/assets/treeflash/presentation_ar_approx.pdf">View Figure 2</a>
-  </object>
+  <img src="/assets/publications/treeflash/presentation_ar_approx.png" alt="TreeFlash autoregressive approximation mechanism.">
   <figcaption>
     <strong>Figure 2:</strong> TreeFlash modifies each one-shot hidden state with a lightweight SwiGLU layer conditioned on the previous token embedding. The adjusted hidden state is then projected with the verifier's output embedding to produce an AR-approximated token distribution.
   </figcaption>
@@ -54,9 +56,7 @@ Training initializes from a pretrained DFlash checkpoint and zero-initializes th
 ## Results
 
 <figure>
-  <object class="paper-figure" data="/assets/treeflash/q3_speedup_graph.pdf" type="application/pdf">
-    <a href="/assets/treeflash/q3_speedup_graph.pdf">View Figure 4</a>
-  </object>
+  <img src="/assets/publications/treeflash/q3_speedup_graph.png" alt="Average speedup comparison across EAGLE-3, DFlash, DDTree, and TreeFlash.">
   <figcaption>
     <strong>Figure 4:</strong> Average speedup across datasets for standard sampling and greedy decoding. TreeFlash consistently improves over both DFlash and DDTree, and the gain increases when the draft budget grows from B=16 to B=64.
   </figcaption>
@@ -75,9 +75,7 @@ TreeFlash is evaluated on Qwen3 4B, Qwen3 8B, and Qwen3 Coder 30B A3B across mat
 ## Why AR-Approximation Helps
 
 <figure>
-  <object class="paper-figure" data="/assets/treeflash/tvd_position_graph.pdf" type="application/pdf">
-    <a href="/assets/treeflash/tvd_position_graph.pdf">View Figure 5</a>
-  </object>
+  <img src="/assets/publications/treeflash/tvd_position_graph.png" alt="Total variation distance across draft positions for DFlash, TreeFlash, and the ground-truth marginal distribution.">
   <figcaption>
     <strong>Figure 5:</strong> DFlash's total variation distance to the verifier grows sharply with draft depth. TreeFlash grows much more slowly, reaching 0.62 at depth 15 compared with 0.81 for DFlash.
   </figcaption>
@@ -86,9 +84,7 @@ TreeFlash is evaluated on Qwen3 4B, Qwen3 8B, and Qwen3 Coder 30B A3B across mat
 The core issue is not only that DFlash is imperfect; it is that marginal future-token distributions are structurally limited. Even the ground-truth marginal distribution diverges from the verifier's autoregressive distribution as draft depth increases. TreeFlash reduces this mismatch by conditioning on the previous token, capturing local token-level coherence that pure marginal distributions miss.
 
 <figure>
-  <object class="paper-figure" data="/assets/treeflash/coverage_position_graph.pdf" type="application/pdf">
-    <a href="/assets/treeflash/coverage_position_graph.pdf">View Figure 6</a>
-  </object>
+  <img src="/assets/publications/treeflash/coverage_position_graph.png" alt="Top-K coverage across draft positions for DFlash and TreeFlash.">
   <figcaption>
     <strong>Figure 6:</strong> TreeFlash uses draft budget more efficiently at deeper positions. By depth 15, TreeFlash top-1 coverage slightly exceeds DFlash top-5 coverage.
   </figcaption>
@@ -100,15 +96,11 @@ This improved calibration matters most in tree drafting. A tree budget is only u
 
 <div class="figure-grid">
   <figure>
-    <object class="paper-figure" data="/assets/treeflash/qual_ddtree_partial.pdf" type="application/pdf">
-      <a href="/assets/treeflash/qual_ddtree_partial.pdf">View DDTree example</a>
-    </object>
+    <img src="/assets/publications/treeflash/qual_ddtree_partial.png" alt="Example draft tree produced by DDTree.">
     <figcaption><strong>DDTree:</strong> The marginal distribution induces nested branch structure because later token rankings are shared across paths.</figcaption>
   </figure>
   <figure>
-    <object class="paper-figure" data="/assets/treeflash/qual_treeflash_partial.pdf" type="application/pdf">
-      <a href="/assets/treeflash/qual_treeflash_partial.pdf">View TreeFlash example</a>
-    </object>
+    <img src="/assets/publications/treeflash/qual_treeflash_partial.png" alt="Example draft tree produced by TreeFlash.">
     <figcaption><strong>TreeFlash:</strong> AR-approximation creates branch-specific continuations, producing a more coherent and better-utilized draft tree.</figcaption>
   </figure>
 </div>
@@ -116,18 +108,14 @@ This improved calibration matters most in tree drafting. A tree budget is only u
 ## Ablations
 
 <figure>
-  <object class="paper-figure" data="/assets/treeflash/abl_treesize_graph.pdf" type="application/pdf">
-    <a href="/assets/treeflash/abl_treesize_graph.pdf">View Figure 7</a>
-  </object>
+  <img src="/assets/publications/treeflash/abl_treesize_graph.png" alt="TreeFlash block efficiency and throughput for different draft budgets.">
   <figcaption>
     <strong>Figure 7:</strong> Increasing the draft budget improves block efficiency and throughput in the single-batch setting, with TreeFlash continuing to benefit from larger trees.
   </figcaption>
 </figure>
 
 <figure>
-  <object class="paper-figure" data="/assets/treeflash/top_m_latency_acceptance_graph.pdf" type="application/pdf">
-    <a href="/assets/treeflash/top_m_latency_acceptance_graph.pdf">View Figure 8</a>
-  </object>
+  <img src="/assets/publications/treeflash/top_m_latency_acceptance_graph.png" alt="TreeFlash block efficiency and throughput for different intermediate top-M values.">
   <figcaption>
     <strong>Figure 8:</strong> The intermediate top-M tree trades off AR-approximation coverage against runtime overhead. In these experiments, throughput peaks M <= 32.
   </figcaption>

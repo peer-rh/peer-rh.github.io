@@ -1,15 +1,15 @@
-title: "Your Name"
-description: "Academic homepage"
+title: "Peer Rheinboldt"
+description: "Personal academic homepage of Peer Rheinboldt, MSc Data Science student at ETH Zürich."
 url: "https://peer-rh.github.io"
 baseurl: ""
 author:
-  name: "Your Name"
-  role: "Researcher"
-  affiliation: "Your affiliation"
-  email: "your.email@example.com"
+  name: "Peer Rheinboldt"
+  role: "MSc Data Science student"
+  affiliation: "ETH Zürich"
+  email: "peer.rheinboldt@gmail.com"
   github: "peer-rh"
-  scholar: ""
-  linkedin: ""
+  scholar: "https://scholar.google.com/citations?user=YmxzhfYAAAAJ&hl=en"
+  linkedin: "peer-rheinboldt"
 
 markdown: kramdown
 highlighter: rouge

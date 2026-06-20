@@ -1,43 +1,69 @@
 ---
 layout: page
 title: CV
-subtitle: A concise curriculum vitae maintained in Markdown.
+subtitle: Peer Rheinboldt
 permalink: /cv/
 ---
 
-## Current Position
+## Contact
 
-**Researcher**, Your affiliation  
-2026-present
+Email: [peer.rheinboldt@gmail.com](mailto:peer.rheinboldt@gmail.com)  
+LinkedIn: [linkedin.com/in/peer-rheinboldt/](https://www.linkedin.com/in/peer-rheinboldt/)
 
 ## Education
 
-**Ph.D. in Computer Science**, University Name  
-2022-2026
+**ETH Zürich / MSc Data Science**  
+Sep 2025 - present, Zürich
 
-**M.Sc. in Computer Science**, University Name  
-2020-2022
+**ETH Zürich / BSc Computer Science**  
+Sep 2022 - Sep 2025, Zürich  
+Average grade: 5.31
 
-## Research Interests
+**Bilinguales Gymnasium Phorms Berlin Süd / Abitur**  
+2015 - 2022, Berlin
 
-- Machine learning
-- Systems
-- Human-centered technology
+**McCallie High School / Exchange year with ASSIST Scholarship**  
+2019 - 2020, Chattanooga, TN, USA
 
-## Selected Publications
-
-See the [Publications]({{ '/publications/' | relative_url }}) page for the full list.
+**Mathematische Schülergesellschaft "Leonhard Euler"**  
+2016 - 2019, Berlin
 
 ## Experience
 
-**Research Intern**, Organization Name  
-Summer 2025
+**Ringier / DevOps Engineering Working Student**  
+Dec 2024 - present
 
-## Service
+At Ringier, I focus on integrating AI into internal workflows, including customer-service tooling and private AI chatbots for internal use.
 
-- Reviewer for relevant conferences and journals.
-- Teaching assistant for relevant courses.
+**ETH Zürich / Teaching Assistant**  
+Sep 2024 - Dec 2024
 
-## Contact
+Teaching assistant for two groups in the course Analysis II.
 
-Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
+**MoveFast GmbH / Data Science Internship**  
+Feb 2019, Berlin
+
+Developed a machine learning algorithm for NLP classification using Python. Created a front end and back end for managing data and comparing experiments using Flask and HTML/Bootstrap.
+
+## Publications
+
+Rheinboldt, P., Berdoz, F., & Wattenhofer, R. (2026). [TreeFlash: Parallel AR-Approximation for Faster Speculative Decoding]({{ '/publications/treeflash/' | relative_url }}). arXiv preprint arXiv:2606.03819.
+
+Berdoz, F., Rheinboldt, P., & Wattenhofer, R. (2025). [Steering Pretrained Drafters during Speculative Decoding]({{ '/publications/steering-pretrained-drafters/' | relative_url }}). Proceedings of the AAAI Conference on Artificial Intelligence (AAAI-26).
+
+## Projects
+
+**Poly App / AI-based language learning app in Flutter**  
+Oct 2023  
+[github.com/peer-rh/PolyApp](https://github.com/peer-rh/PolyApp)
+
+Poly App is a language-learning app built with Flutter and Firebase. It uses the ChatGPT API to create interactive chat experiences and includes Duolingo-like vocabulary learning.
+
+**AI Paper Notes & Implementations / JAX & Equinox**  
+[github.com/peer-rh/zoo](https://github.com/peer-rh/zoo)
+
+Includes notes and implementations for AI papers such as Retentive Networks and Griffin, plus exploratory ideas such as an input-based gated retentive network.
+
+## Skills
+
+**Programming:** Rust, Python with PyTorch, NumPy, and JAX; basics in Dart/Flutter, Java, C/C++, Go, and TypeScript/JavaScript.

@@ -240,13 +240,12 @@ a:hover {
   border-radius: 0 8px 8px 0;
 }
 
-.paper-figure {
+.paper-video {
   display: block;
   width: 100%;
-  height: min(62vw, 520px);
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--surface);
+  background: #000000;
 }
 
 .figure-grid {
@@ -272,6 +271,10 @@ a:hover {
   gap: 22px;
   border-top: 1px solid var(--line);
   padding-top: 22px;
+}
+
+.publication-card.no-thumbnail {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .publication-card:first-child {

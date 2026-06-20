@@ -2,14 +2,12 @@
 title: "Steering Pretrained Drafters During Speculative Decoding"
 authors: "Frédéric Berdoz, Peer Rheinboldt, and Roger Wattenhofer"
 venue: "Proceedings of the AAAI Conference on Artificial Intelligence"
-venue_url: "https://ojs.aaai.org/index.php/AAAI/issue/view/629"
 year: 2026
 date: 2026-03-14
 github: "https://github.com/ETH-DISCO/SD-square"
 arxiv: "https://arxiv.org/abs/2511.09844"
 paper: "https://ojs.aaai.org/index.php/AAAI/article/view/40255"
 bibtex: "/assets/files/steering-pretrained-drafters.bib"
-thumbnail: "/assets/publications/steering-pretrained-drafters/method-overview.png"
 description: "A lightweight steering mechanism improves pretrained drafter alignment for speculative decoding with negligible computational overhead."
 abstract: "Speculative decoding accelerates language model inference by separating generation into fast drafting and parallel verification. Its main limitation is drafter-verifier misalignment, which limits token acceptance and reduces overall effectiveness. While small drafting heads trained from scratch compensate with speed, they struggle when verification dominates latency or when inputs are out of distribution. In contrast, pretrained drafters, though slower, achieve higher acceptance rates thanks to stronger standalone generation capabilities, making them competitive when drafting latency is negligible relative to verification or communication overhead. In this work, we aim to improve the acceptance rates of pretrained drafters by introducing a lightweight dynamic alignment mechanism: a steering vector computed from the verifier's hidden states and injected into the pretrained drafter. Compared to existing offline alignment methods such as distillation, our approach boosts the number of accepted tokens by up to 35% under standard sampling and 22% under greedy sampling, all while incurring negligible computational overhead. Importantly, our approach can be retrofitted to existing architectures and pretrained models, enabling rapid adoption."
 doi: "10.1609/aaai.v40i36.40255"

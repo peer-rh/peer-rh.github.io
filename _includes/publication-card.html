@@ -1,5 +1,5 @@
 {% assign publication = include.publication %}
-<article class="publication-card">
+<article class="publication-card{% unless publication.thumbnail %} no-thumbnail{% endunless %}">
   {% if publication.thumbnail %}
     <a class="publication-thumb" href="{{ publication.project | default: publication.url | relative_url }}" aria-label="{{ publication.title }}">
       <img src="{{ publication.thumbnail | relative_url }}" alt="">

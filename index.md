@@ -1,15 +1,17 @@
 ---
 layout: default
 title: Home
-description: Academic homepage
-profile_image:
+description: Personal academic homepage of Peer Rheinboldt.
+profile_image: /assets/profile/peer-rheinboldt.jpg
 social_links:
   - label: GitHub
     url: https://github.com/peer-rh
   - label: Google Scholar
-    url:
+    url: https://scholar.google.com/citations?user=YmxzhfYAAAAJ&hl=en
   - label: LinkedIn
-    url:
+    url: https://www.linkedin.com/in/peer-rheinboldt/
+  - label: Email
+    url: mailto:peer.rheinboldt@gmail.com
 ---
 
 <section class="home-hero">
@@ -36,15 +38,13 @@ social_links:
 
 <div class="prose">
   <p>
-    I am a researcher working on topics at the intersection of machine learning,
-    systems, and human-centered technology. Replace this paragraph with a concise
-    research biography, your current role, advisors or collaborators, and the
-    problems you care about.
+    I am an MSc Data Science student at ETH Zürich interested in machine learning and efficient language model inference. My current research focuses on speculative decoding, and I enjoy exploring a broad range of topics across AI and computer science.
+
   </p>
 
   <h2 class="section-title">News</h2>
   <ul class="news-list">
-    <li><strong>Jun 2026</strong> This site is now generated from Markdown with Jekyll.</li>
-    <li><strong>May 2026</strong> Add recent papers, talks, or professional updates here.</li>
+    <li><strong>Jun 2026</strong> TreeFlash is available as an arXiv preprint.</li>
+    <li><strong>Mar 2026</strong> Steering Pretrained Drafters During Speculative Decoding appears at AAAI-26.</li>
   </ul>
 </div>
