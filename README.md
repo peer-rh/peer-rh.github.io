@@ -17,4 +17,3 @@ The main content files are:
 - `_publications/*.md` for individual publications and project pages
 
 Each publication supports front matter fields for `github`, `arxiv`, `paper`, `bibtex`, and `project`. If `project` is omitted, the project button links to the publication's local page.
-# peer-rh.github.io

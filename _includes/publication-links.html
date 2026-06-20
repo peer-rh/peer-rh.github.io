@@ -1,0 +1,19 @@
+{% assign publication = include.publication %}
+<div class="publication-links" aria-label="Publication links">
+  {% if publication.github %}
+    <a href="{{ publication.github }}">GitHub</a>
+  {% endif %}
+  {% if publication.arxiv %}
+    <a href="{{ publication.arxiv }}">arXiv</a>
+  {% endif %}
+  {% if publication.paper %}
+    <a href="{{ publication.paper }}">Paper</a>
+  {% endif %}
+  {% if publication.bibtex %}
+    <a href="{{ publication.bibtex }}">BibTeX</a>
+  {% endif %}
+  {% assign project_url = publication.project | default: publication.url %}
+  {% if project_url %}
+    <a href="{{ project_url | relative_url }}">Project</a>
+  {% endif %}
+</div>

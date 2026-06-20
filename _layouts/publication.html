@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article class="publication-page">
+  <p class="eyebrow">
+    {% if page.venue_url %}
+      <a href="{{ page.venue_url }}">{{ page.venue }}</a>
+    {% else %}
+      {{ page.venue }}
+    {% endif %}
+    {% if page.year %}<span>{{ page.year }}</span>{% endif %}
+  </p>
+
+  <header class="publication-hero">
+    <h1>{{ page.title }}</h1>
+    {% if page.authors %}
+      <p class="authors">{{ page.authors }}</p>
+    {% endif %}
+    {% include publication-links.html publication=page %}
+  </header>
+
+  {% if page.abstract %}
+    <section class="abstract">
+      <h2>Abstract</h2>
+      <p>{{ page.abstract }}</p>
+    </section>
+  {% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

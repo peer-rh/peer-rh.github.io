@@ -1,0 +1,28 @@
+{% assign publication = include.publication %}
+<article class="publication-card">
+  {% if publication.thumbnail %}
+    <a class="publication-thumb" href="{{ publication.project | default: publication.url | relative_url }}" aria-label="{{ publication.title }}">
+      <img src="{{ publication.thumbnail | relative_url }}" alt="">
+    </a>
+  {% endif %}
+
+  <div class="publication-body">
+    <p class="publication-venue">
+      {% if publication.venue_url %}
+        <a href="{{ publication.venue_url }}">{{ publication.venue }}</a>
+      {% else %}
+        {{ publication.venue }}
+      {% endif %}
+    </p>
+    <h2><a href="{{ publication.project | default: publication.url | relative_url }}">{{ publication.title }}</a></h2>
+    {% if publication.authors %}
+      <p class="authors">{{ publication.authors }}</p>
+    {% endif %}
+    {% if publication.description %}
+      <p>{{ publication.description }}</p>
+    {% elsif publication.abstract %}
+      <p>{{ publication.abstract | truncate: 220 }}</p>
+    {% endif %}
+    {% include publication-links.html publication=publication %}
+  </div>
+</article>

@@ -1,0 +1,33 @@
+title: "Your Name"
+description: "Academic homepage"
+url: "https://peer-rh.github.io"
+baseurl: ""
+author:
+  name: "Your Name"
+  role: "Researcher"
+  affiliation: "Your affiliation"
+  email: "your.email@example.com"
+  github: "peer-rh"
+  scholar: ""
+  linkedin: ""
+
+markdown: kramdown
+highlighter: rouge
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: publication
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
