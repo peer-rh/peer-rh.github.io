@@ -45,7 +45,3 @@ Developed a machine learning algorithm for NLP classification using Python. Crea
 Rheinboldt, P., Berdoz, F., & Wattenhofer, R. (2026). [TreeFlash: Parallel AR-Approximation for Faster Speculative Decoding]({{ '/publications/treeflash/' | relative_url }}). arXiv preprint arXiv:2606.03819.
 
 Berdoz, F., Rheinboldt, P., & Wattenhofer, R. (2025). [Steering Pretrained Drafters during Speculative Decoding]({{ '/publications/steering-pretrained-drafters/' | relative_url }}). Proceedings of the AAAI Conference on Artificial Intelligence (AAAI-26).
-
-## Skills
-
-**Programming:** Rust, Python with PyTorch, NumPy, and JAX; basics in Dart/Flutter, Java, C/C++, Go, and TypeScript/JavaScript.
