@@ -5,11 +5,6 @@ subtitle: Peer Rheinboldt
 permalink: /cv/
 ---
 
-## Contact
-
-Email: [peer.rheinboldt@gmail.com](mailto:peer.rheinboldt@gmail.com)  
-LinkedIn: [linkedin.com/in/peer-rheinboldt/](https://www.linkedin.com/in/peer-rheinboldt/)
-
 ## Education
 
 **ETH Zürich / MSc Data Science**  
