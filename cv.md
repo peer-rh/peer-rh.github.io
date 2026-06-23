@@ -46,19 +46,6 @@ Rheinboldt, P., Berdoz, F., & Wattenhofer, R. (2026). [TreeFlash: Parallel AR-Ap
 
 Berdoz, F., Rheinboldt, P., & Wattenhofer, R. (2025). [Steering Pretrained Drafters during Speculative Decoding]({{ '/publications/steering-pretrained-drafters/' | relative_url }}). Proceedings of the AAAI Conference on Artificial Intelligence (AAAI-26).
 
-## Projects
-
-**Poly App / AI-based language learning app in Flutter**  
-Oct 2023  
-[github.com/peer-rh/PolyApp](https://github.com/peer-rh/PolyApp)
-
-Poly App is a language-learning app built with Flutter and Firebase. It uses the ChatGPT API to create interactive chat experiences and includes Duolingo-like vocabulary learning.
-
-**AI Paper Notes & Implementations / JAX & Equinox**  
-[github.com/peer-rh/zoo](https://github.com/peer-rh/zoo)
-
-Includes notes and implementations for AI papers such as Retentive Networks and Griffin, plus exploratory ideas such as an input-based gated retentive network.
-
 ## Skills
 
 **Programming:** Rust, Python with PyTorch, NumPy, and JAX; basics in Dart/Flutter, Java, C/C++, Go, and TypeScript/JavaScript.
