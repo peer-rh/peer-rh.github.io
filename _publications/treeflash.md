@@ -1,7 +1,7 @@
 ---
 title: "TreeFlash: Parallel AR-Approximation for Faster Speculative Decoding"
 authors: "Peer Rheinboldt, Frédéric Berdoz, and Roger Wattenhofer"
-venue: "arXiv preprint"
+venue: "Findings of the Association for Computational Linguistics: EMNLP 2026"
 year: 2026
 date: 2026-06-03
 github: "https://github.com/ETH-DISCO/TreeFlash"

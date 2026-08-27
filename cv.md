@@ -42,6 +42,6 @@ Developed a machine learning algorithm for NLP classification using Python. Crea
 
 ## Publications
 
-Rheinboldt, P., Berdoz, F., & Wattenhofer, R. (2026). [TreeFlash: Parallel AR-Approximation for Faster Speculative Decoding]({{ '/publications/treeflash/' | relative_url }}). arXiv preprint arXiv:2606.03819.
+Rheinboldt, P., Berdoz, F., & Wattenhofer, R. (2026). [TreeFlash: Parallel AR-Approximation for Faster Speculative Decoding]({{ '/publications/treeflash/' | relative_url }}). Findings of the Association for Computational Linguistics: EMNLP 2026.
 
 Berdoz, F., Rheinboldt, P., & Wattenhofer, R. (2025). [Steering Pretrained Drafters during Speculative Decoding]({{ '/publications/steering-pretrained-drafters/' | relative_url }}). Proceedings of the AAAI Conference on Artificial Intelligence (AAAI-26).

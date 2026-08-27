@@ -44,7 +44,8 @@ social_links:
 
   <h2 class="section-title">News</h2>
   <ul class="news-list">
-    <li><strong>Jun 2026</strong> TreeFlash is available as an arXiv preprint.</li>
+    <li><strong>Aug 2026</strong> TreeFlash is accepted to Findings of EMNLP 2026.</li>
+    <li><strong>Jul 2026</strong> Tencent's <a href="https://arxiv.org/abs/2607.25852">AngelSpec</a> adopts a TreeFlash-inspired AR-conditioning head.</li>
     <li><strong>Mar 2026</strong> Steering Pretrained Drafters During Speculative Decoding appears at AAAI-26.</li>
   </ul>
 </div>
