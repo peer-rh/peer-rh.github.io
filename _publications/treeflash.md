@@ -6,6 +6,7 @@ year: 2026
 date: 2026-06-03
 github: "https://github.com/ETH-DISCO/TreeFlash"
 arxiv: "https://arxiv.org/abs/2606.03819"
+paper: "https://aclanthology.org/2026.findings-emnlp.2125/"
 bibtex: "/assets/files/treeflash.bib"
 project:
 description: "TreeFlash accelerates tree-based speculative decoding by adding a lightweight autoregressive approximation to one-shot block drafting."
